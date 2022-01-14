@@ -11,5 +11,5 @@ setup(name='tml',
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
       ],
-      install_requires=['pytorch'],
+      install_requires=['torch', 'numpy'],
       packages=find_packages())
