@@ -14,7 +14,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from ..utils import shape
+from .utils import shape
 
 class View(nn.Module):
     """ A Module that creates a view of an input tensor. """
