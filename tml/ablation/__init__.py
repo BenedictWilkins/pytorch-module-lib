@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-    Created on 14-01-2022 17:07:04
+    Created on 02-02-2022 15:06:33
 
     [Description]
 """
@@ -9,8 +9,4 @@ __author__ = "Benedict Wilkins"
 __email__ = "benrjw@gmail.com"
 __status__ = "Development"
 
-from . import decorators
-from . import shape
-
-
-from .shape import *
+from ._ablation import *
