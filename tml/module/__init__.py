@@ -9,3 +9,8 @@ __status__ = "Development"
 
 from .GDN import *
 from .ResBlock2D import *
+from .MLP import *
+
+from .join import *
+from .view import *
+from .discrete import *

@@ -10,7 +10,7 @@ __status__ = "Development"
 import numpy as np
 import torch
 import torch.nn as nn
-from . import utils
+from .. import utils
 
 class OneHotEmbedding(nn.Module):
     """ 

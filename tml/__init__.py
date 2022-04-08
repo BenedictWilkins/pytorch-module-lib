@@ -9,7 +9,5 @@ __status__ = "Development"
 
 
 from . import utils
-
-from .view import *
-from .discrete import * 
 from .module import *
+from .architecture import *
