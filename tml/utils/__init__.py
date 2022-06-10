@@ -12,5 +12,4 @@ __status__ = "Development"
 from . import decorators
 from . import shape
 
-
-from .shape import *
+from .shape import as_shape

@@ -16,7 +16,7 @@ from functools import reduce
 from typing import List
 from ..utils.shape import as_shape
 
-__all__ = ("JoinConcatenate", "JoinSum", "JoinProd", "JoinAttention")
+__all__ = ("JoinConcatenate", "JoinSum", "JoinProduct", "JoinAttention")
 
 class JoinConcatenate(nn.Module):
 
@@ -25,22 +25,22 @@ class JoinConcatenate(nn.Module):
 
 class JoinSum(nn.Module):
 
-    def foward(self, x : List[torch.Tensor]):
+    def forward(self, x : List[torch.Tensor]):
         return sum(x)
 
-class JoinProd(nn.Module):
+class JoinProduct(nn.Module):
 
     def forward(self, x : List[torch.Tensor]):
         return reduce(lambda x,y : x * y, x)
 
 class JoinAttention(nn.Module):
 
-    def __init__(self, input_shape, num_heads=1, residual=True, q_index=0):
+    def __init__(self, input_shape, num_heads=1, residual = True, q_index=0):
         super().__init__()
         self.input_shape = as_shape(input_shape)
         assert len(self.input_shape) == 1 # flatten input...
         self.attention = nn.MultiheadAttention(self.input_shape[0], num_heads=num_heads, batch_first=False)
-        self.layer_norm = nn.LayerNorm(self.input_shape[0]) if residual  else None
+        self.layer_norm = nn.LayerNorm(self.input_shape[0]) if residual else None
         self.residual = residual
         self.q_index = q_index
 

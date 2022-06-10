@@ -10,10 +10,7 @@ __status__ = "Development"
 if __name__ == "__main__":
 
    import torchinfo
-   from tml.module.AlexNet import *
+   from tml.module.AE import *
 
-   net = AlexNet84(128, num_output_layers=1)
-   torchinfo.summary(net, input_size=(1, *net.input_shape), device="cpu")
-
-   net = AlexNet28(128, num_output_layers=1)
+   net = AEConv28((1,28,28), num_linear_layers=1)
    torchinfo.summary(net, input_size=(1, *net.input_shape), device="cpu")

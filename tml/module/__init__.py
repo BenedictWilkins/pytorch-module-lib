@@ -14,3 +14,9 @@ from .MLP import *
 from .join import *
 from .view import *
 from .discrete import *
+
+
+from . import hyper
+
+from . import UNet
+from . import AlexNet
